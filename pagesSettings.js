@@ -25,11 +25,13 @@ const myObjectMethods = {
     const currentPageIdx = this.array.indexOf(this.currentPage);
     const idx = currentPageIdx === this.array.length - 1 ? -1 : currentPageIdx;
     this.currentPage = this.array[idx+1];
+    return Pagination
   },
   prevPage: function () {
     const currentPageIdx = this.array.indexOf(this.currentPage);
     const idx = currentPageIdx === 0 ? this.array.length : currentPageIdx;
     this.currentPage = this.array[idx-1];
+    return Pagination
   },
   goToPage: function (idx = 0) {
     if (typeof idx !== "number") throw new TypeError("invalid input");
@@ -55,7 +57,7 @@ Pagination.init(alphabetArray, 4);
 console.log(Pagination.getPageItems())
 Pagination.prevPage()
 console.log(Pagination.getPageItems())
-Pagination.nextPage()
+Pagination.nextPage().nextPage()
 console.log(Pagination.getPageItems())
 Pagination.firstPage()
 console.log(Pagination.getPageItems())
