@@ -57,7 +57,7 @@ Pagination.init(alphabetArray, 4);
 console.log(Pagination.getPageItems())
 Pagination.prevPage()
 console.log(Pagination.getPageItems())
-Pagination.nextPage().nextPage()
+Pagination.nextPage().nextPage().prevPage()
 console.log(Pagination.getPageItems())
 Pagination.firstPage()
 console.log(Pagination.getPageItems())
